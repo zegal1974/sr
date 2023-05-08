@@ -31,3 +31,16 @@
 
 
 https://api-static.mihoyo.com/common/blackboard/sr_wiki/v1/content/info?app_sn=sr_wiki&content_id=317
+
+rails g model account name login:unqi level:integer
+
+rails g model character-instance character:belongs_to account:belongs_to level:integer hp:integer attack:integer defense:integer speed:integer critical_hit_rate:float  critical_hit_damage:float energy_limit:integer david:integer defeat_special_attack:float treatment_bonus:float
+
+modifier
+
+| 字段名   | 类型 | 空  | 唯一 | 缺省 | 描述 |
+| -------- | ---- | --- | ---- | ---- | ---- |
+| property |      |     |      |      ||
+| mode     |      |     |      |      |increase: +value<br>reduce: -value<br> append: *(1+value)<br>subtract: *(1-value)|
+| value    |      |     |      |      ||
+
